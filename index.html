@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&family=Montserrat:wght@400;500;600;700&family=Varela+Round&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-   <script src="./dist/main.js"></script> 
+    <script src="./dist/main.js"></script> 
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <title>City Livability</title>
 </head>
@@ -28,13 +28,22 @@
         </div>
     </div>
 
-
-    
-    <script src="src/index.js"></script>
+  
+    <button onclick="myFunction('new-york')" class="dropbtn">New York</button>
     <button onclick="myFunction('new-york')" class="dropbtn">New York</button>
     <button onclick="myFunction('jakarta')" class="dropbtn">Jakarta</button>
     <button onclick="myFunction('san-francisco-bay-area')" class="dropbtn">SF</button>
+
     
+    <p id="demo">Click me.</p>
+    <script>
+        document.getElementById("demo").onclick = function () { myFunction() };
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+        }
+    </script>
+
 
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="https://d3js.org/topojson.v2.min.js"></script>
@@ -90,7 +99,7 @@
                     },
                    
                 ];
-                const svg = d3.select('svg')
+                let svg = d3.select('svg')
                     .attr('width', width).attr('height', height);
                 const markerGroup = svg.append('g');
                 const projection = d3.geoOrthographic();
@@ -202,7 +211,7 @@
                 "translate(" + margin.left + "," + margin.top + ")");
 
         // Get data
-        d3.csv("amounts.csv").then(function (data) {
+       d3.csv("amounts.csv").then(function (data) {
 
             // Format data
             data.forEach(function (d) {
@@ -232,11 +241,67 @@
             svg.append("g")
                 .call(d3.axisLeft(y));
 
-        });
+        }); -->
 
     </script> -->
-<!-- </body> -->
+</body>
 
+
+   <!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript"> 
+
+// Load the Visualization API and the piechart package.
+google.load('visualization', '1.0', {'packages':['corechart']});
+
+// Set a callback to run when the Google Visualization API is loaded.
+google.setOnLoadCallback(drawChart);
+
+// Callback that creates and populates a data table,
+// instantiates the pie chart, passes in the data and
+// draws it.
+function drawChart() {
+
+// Create the data table.
+var data = google.visualization.arrayToDataTable([
+    ['Item', 'Yes', { role: 'tooltip' } ,'No',  { role: 'tooltip' } ],
+    ['Var A',   .5 , '', .5,  ''],
+    ['Var B', .9, '', .1,  ''],
+]);
+var data2 = google.visualization.arrayToDataTable([
+    ['Item', 'Yes', { role: 'tooltip' } ,'No',  { role: 'tooltip' } ],
+    ['Var A',   .2 , '', .8,  ''],
+    ['Var B', .8, '', .2,  ''],
+]);
+
+var options = {
+    width: 250,
+    height: 150,
+    backgroundColor: '#FFFFF0',
+    legend: { position: 'none'},
+    hAxis:{ textPosition: 'none', gridlines: {color:'grey', count: 2}},
+    bar: { groupWidth: '75%' },
+    isStacked: true,
+    colors: ['#FF6600', '#FFFFF0'],
+ };
+
+// Instantiate and draw our chart, passing in some options.
+var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+var chart2 = new google.visualization.BarChart(document.getElementById('chart_div2'));
+chart.draw(data2, options2);
+}
+
+draw(chart);
+draw(chart2);
+</script>
+</head>
+
+<body>
+<!--Div that will hold the bar charts-->
+<div id="chart_div"></div>
+<div id="chart_div2"></div>
+</body>
 
 
      

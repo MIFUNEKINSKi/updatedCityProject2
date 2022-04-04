@@ -11,11 +11,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
 // getCities is not working 
 
 function getCities = (){
-  $.get('https://api.teleport.org/api/countries/').then(function (data) {
-    var countries = $.map(data['_links']['country:items'], function (country) { return country.name });
+  await fetch('https://api.teleport.org/api/countries/').then(function (data) {
+    var countries = map(data['_links']['country:items'], function (country) { return country.name });
     fetchedCities = [];
     countries.forEach(function (country) {
-      $.get('https://api.teleport.org/api/cities/?search=' + country + '&embed=city%3Asearch-results%2Fcity%3Aitem%2Fcity').then(function (data) {
+      ('https://api.teleport.org/api/cities/?search=' + country + '&embed=city%3Asearch-results%2Fcity%3Aitem%2Fcity').then(function (data) {
         var cities = data['_embedded']['city:search-results'];
         cities.forEach(function (city) {
           var city = {
