@@ -1,5 +1,4 @@
 
-JSONDATA = "";
 // let apiUrl = "https://api.teleport.org/api/urban_areas/" map this to names
 // thhen iterate through names and map on the additional data I need 
 
@@ -9,6 +8,7 @@ JSONDATA = "";
 // https://api.teleport.org/api/urban_areas/slug:belfast/scores/
 
 // maybe individual scores for better bar graph later
+JSONDATA = "";
 async function getJson(url) {
   let response = await fetch(url);
   let data = await response.json()
@@ -22,27 +22,32 @@ async function main() {
 
   //OPTION 2
   jsondata = await getJson(apiUrl)
-  console.log(jsondata);
+  // console.log(jsondata);
 }
+getJson("https://api.teleport.org/api/urban_areas/")
 main();
-console.log(JSONDATA);
+console.log(JSONDATA)
+// let mapped1 = JSONDATA.map (function(mapped) {
+//   let data = { "Name" : mapped.name }
+// })
+// console.log(mapped1);
 
+// DIFF ATTEMPT
 
+fetch('https://api.teleport.org/api/urban_areas/')
+  .then((res) => {
+   
+      if (res.ok) {
+      console.log("success");
+      return res.json();
+    } else {
+      throw new Error('Network response was not ok');
+    }
 
-// fetch('https://api.teleport.org/api/urban_areas/')
-//   .then((res) => {
-  //     let data1 = []
-  //     if (res.ok) {
-//       console.log("success");
-//       return res.json();
-//     } else {
-//       throw new Error('Network response was not ok');
-//     }
+  })
 
-//   })
-
-//   .then((data) => console.log(data))
-//   .catch((error) => console.log(error));
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
 
 
 // console.log(data1);
