@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" href="images/Olympics-logo-favicon.jpeg" />
-    <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="stylesheet" href="src/dist/main.css">
+    <!-- <link rel="stylesheet" href="./dist/main.css" /> -->
     <link
         href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700&family=Montserrat:wght@400;500;600;700&family=Varela+Round&display=swap"
         rel="stylesheet" />
@@ -32,43 +32,30 @@
         </div>
     </div>
 
+    <div>
+        <h1 id="header">
+            City Livability
+        </h1>
+    </div>
+
     <!-- testing click -->
-    <script>
-    // document.getElementById("button1").onclick = function () { myFunction() };
     
-  function cityScoreFromName(city) {
-        const getData = async () => {
-            const data = [];
-
-            const f1_data = await fetch(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`)
-                .then(response => response.json())
-                .then(data => data.teleport_city_score);
-            data.push(f1_data)
-
-            console.log(data);
-        };
-
-        getData();
-    }
-    </script>
 
 
-  <!-- testing api fetch -->
-    <script type="text/javascript" src="src/scripts/test.js"></script>
-    <button onclick="cityScoreFromName('new-york')" class="dropbtn">New York</button>
-    <button onclick="cityScoreFromName('jakarta')" class="dropbtn">Jakarta</button>
-    <button onclick="cityScoreFromName('san-francisco-bay-area')" class="dropbtn">SF</button>
 
+<!-- testing api fetch -->
+<div class="flex-container">
+<script type="text/javascript" src="src/scripts/test.js"></script>
+
+<button onclick="cityScoreFromName('new-york')" class="dropbtn">New York</button>
+<button onclick="cityScoreFromName('jakarta')" class="dropbtn">Jakarta</button>
+<button onclick="cityScoreFromName('san-francisco-bay-area')" class="dropbtn">SF</button>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/topojson.v2.min.js"></script>
 
     <!-- attempt at flex container for both ***NOT WORKING*** -->
-    <div class="flex-container">
-        <h1 id="header">City Livability</h1>
+
         <div class="map-and-data-container">
-            <div class="data" id="data_section"></div>
-            <div class="map">
-                <div id="hover-info"></div>
                 <svg class="worldmap"></svg>
             </div>
         </div>

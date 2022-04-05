@@ -11,7 +11,7 @@ body {
   left: 0px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
   font-size: 40px;
   margin-right: 25px;
   padding-bottom: 5px;
@@ -26,16 +26,41 @@ body {
   position: relative;
 }
 
-#bar_graph_and_data {
-  width: 500px;
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
 }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  border: 3px solid black;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+} */
 
 .flex-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: blue;
-}
+  background-color: rgb(255, 255, 255);
+} 
 
 
 #header {
@@ -45,5 +70,5 @@ body {
   border-radius: 25px;
   font-size: 55px;
   font-weight: 500;
-  margin: 100px 0px 50px 0px;
+  margin: 10px 0px 50px 0px;
 }

@@ -67,15 +67,78 @@
                         .merge(markers)
                         .attr('cx', d => projection([d.longitude, d.latitude])[0])
                         .attr('cy', d => projection([d.longitude, d.latitude])[1])
+                        
+                        .on("mouseover", function (d) {
+                            console.log("hovering")
+                            d3.timer(function (elapsed) {
+                                projection.rotate([config.speed % elapsed - 120, config.verticalTilt, config.horizontalTilt]);
+                                svg.selectAll("path").attr("d", path);
+                                drawMarkers();
+                            });
+                            enableRotation()
+
+                        })
+                        .on("click", function (d) {
+                            console.log("clicking")
+                        })
+                     
                         .attr('fill', d => {
                             const coordinate = [d.longitude, d.latitude];
                             gdistance = d3.geoDistance(coordinate, projection.invert(center));
-                            return gdistance > 1.57 ? 'none' : 'steelblue';
+                            return gdistance > 1.57 ? 'none' : 'steelgrey';
                         })
+
                         .attr('r', 7);
+                        
+                        
+                        
 
                     markerGroup.each(function () {
                         this.parentNode.appendChild(this);
+                        
                     });
-                }
+        }
+
+
+
            
+
+
+// var width = 345,
+//     height = 300;
+// var projection = d3.geoMercator()
+//     .center([88.36, 27.58])
+//     .translate([width / 2, height / 2])
+//     .scale(7000);
+// var path = d3.geoPath()
+//     .projection(projection);
+
+// var svg = d3.select('#Sk_Map').append('svg')
+//     .attr('width', width)
+//     .attr('height', height);
+
+// var g = svg.append('g');
+
+// d3.json('https://raw.githubusercontent.com/shklnrj/IndiaStateTopojsonFiles/master/Sikkim.topojson')
+//     .then(state => {
+
+//         g.append("g")
+//             .selectAll("path")
+//             .data(topojson.feature(state, state.objects.Sikkim).features)
+//             .enter()
+//             .append("path")
+//             .attr("d", path)
+//             .attr("class", "feature")
+//             .on("click", function (d) {
+//                 var prop = d.properties;
+//                 var string = "<p><strong>District Name</strong>: " + prop.Dist_Name;
+//                 d3.select("#Place_Details")
+//                     .html(string)
+//             })
+
+//         g.append('path')
+//             .datum(topojson.mesh(state, state.objects.Sikkim, (a, b) => a !== b))
+//             .attr('class', 'boundary')
+//             .attr('d', path);
+
+//     });
