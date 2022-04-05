@@ -39,7 +39,7 @@
     </script>
   
   <!-- testing api fetch -->
-  <script type="text/javascript" src="src/scripts/test.js"></script>
+    <script type="text/javascript" src="src/scripts/test.js"></script>
     <button onclick="myFunction()" class="dropbtn">New York</button>
     <button onclick="myFunction('new-york')" class="dropbtn">New York</button>
     <button onclick="myFunction('jakarta')" class="dropbtn">Jakarta</button>
@@ -50,7 +50,7 @@
 
 
 
-    <!-- attempt at flex container for both -->
+    <!-- attempt at flex container for both ***NOT WORKING*** -->
     <div class="flex-container">
         <h1 id="header">City Livability</h1>
         <div class="map-and-data-container">
@@ -62,10 +62,12 @@
         </div>
     </div>
 
-    </div> 
+
         <!-- Globe with dummy data -->
 
     <body class="flex-container">
+        <div id="chart_div"></div>
+        <div id="chart_div2"></div>
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="https://d3js.org/topojson.v1.min.js"></script>
         <script src="src/scripts/globeCreation.js"></script>
@@ -78,11 +80,7 @@
 <script src="src/scripts/bar.js"></script>
 </head>
 
-<body>
-    <!--Div that will hold the bar charts-->
-    <div id="chart_div"></div>
-    <div id="chart_div2"></div>
-</body>
+
 
 <!-- bar chart that isn't working when they are together -->
 

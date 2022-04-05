@@ -10,6 +10,15 @@ fetch('https://api.teleport.org/api/countries/')
   .then((data) => console.log(data))
   .catch((error) => console.log(error));
 
+
+https://api.teleport.org/api/urban_areas/ - names 
+https://api.teleport.org/api/urban_areas/slug:belfast for each name i'd like the overall score and latlon and summary
+https://api.teleport.org/api/urban_areas/slug:belfast/scores/
+
+// maybe individual scores for better bar graph later
+
+
+
 // $.get('https://api.teleport.org/api/countries/').then(function (data) {
 //   var countries = data.map(data['_links']['country:items'], function (country) { return country.name });
 //   fetchedCities = [];
@@ -22,7 +31,9 @@ fetch('https://api.teleport.org/api/countries/')
 //           fullName: city['_embedded']['city:item'].full_name,
 //           name: city['_embedded']['city:item'].name,
 //           population: city['_embedded']['city:item'].population
-//           scores 
+//           latlon: city['_embedded']['city:item'].latlon
+//           geoname_id: city['_embedded']['city:item'].latlon
+//           
 //         }
 //         fetchedCities.push(city);
 //       });
