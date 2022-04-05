@@ -1,4 +1,4 @@
-     
+
                 const width = 960;
                 const height = 500;
                 const config = {
@@ -67,9 +67,11 @@
                         .merge(markers)
                         .attr('cx', d => projection([d.longitude, d.latitude])[0])
                         .attr('cy', d => projection([d.longitude, d.latitude])[1])
-                        
+                        .attr('another', d => projection([d.longitude, d.latitude, d.name])[2])
+           
                         .on("mouseover", function (d) {
-                            console.log("hovering")
+                            console.log(d)
+                            NAME = d.name
                             d3.timer(function (elapsed) {
                                 projection.rotate([config.speed % elapsed - 120, config.verticalTilt, config.horizontalTilt]);
                                 svg.selectAll("path").attr("d", path);
@@ -79,7 +81,8 @@
 
                         })
                         .on("click", function (d) {
-                            console.log("clicking")
+                            console.log("clicking");
+                            console.log(cityScoreFromName(NAME))
                         })
                      
                         .attr('fill', d => {

@@ -8,7 +8,7 @@ function cityScoreFromName(city) {
                 .then(data => data.teleport_city_score);
   data.push(f1_data)
 
-  console.log(data);
+return data[0]
         };
 
   getData();
