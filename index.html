@@ -15,7 +15,9 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <title>City Livability</title>
 </head>
+
 <!-- nav  -->
+
 <body>
     <div class="nav">
         <div id="icons-container">
@@ -28,153 +30,61 @@
         </div>
     </div>
 
+    <!-- api data fetch ***NOT WORKING***-->
+    <script>fetch('api_data.json').then(function (response) {
+        return response.json();
+    }).then(function (obj) {
+        console.log(obj)
+    })
+    </script>
   
-    <button onclick="myFunction('new-york')" class="dropbtn">New York</button>
+  <!-- testing api fetch -->
+  <script type="text/javascript" src="src/scripts/test.js"></script>
+    <button onclick="myFunction()" class="dropbtn">New York</button>
     <button onclick="myFunction('new-york')" class="dropbtn">New York</button>
     <button onclick="myFunction('jakarta')" class="dropbtn">Jakarta</button>
     <button onclick="myFunction('san-francisco-bay-area')" class="dropbtn">SF</button>
 
-    
-    <p id="demo">Click me.</p>
-    <script>
-        document.getElementById("demo").onclick = function () { myFunction() };
-
-        function myFunction() {
-            document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
-        }
-    </script>
-
-
-        <script src="https://d3js.org/d3.v4.min.js"></script>
-        <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
 
 
 
-        <!-- attempt at flex container for both -->
-        <div class="flex-container">
-            <h1 id="header">City Livability</h1>
-            <div class="map-and-data-container">
-                <div class="data" id="data_section"></div>
-                <div class="map">
-                    <div id="hover-info"></div>
-                    <svg class="worldmap"></svg>
-                </div>
+    <!-- attempt at flex container for both -->
+    <div class="flex-container">
+        <h1 id="header">City Livability</h1>
+        <div class="map-and-data-container">
+            <div class="data" id="data_section"></div>
+            <div class="map">
+                <div id="hover-info"></div>
+                <svg class="worldmap"></svg>
             </div>
         </div>
+    </div>
 
-        </div> 
-<!-- simple bar chart -->
-<!-- <svg width=”500" height=”800" class=”bar-chart”></svg>
-<script src=”https://d3js.org/d3.v5.min.js"></script>
-<script src=”script.js”></script> -->
-
-
+    </div> 
         <!-- Globe with dummy data -->
 
-    <body> 
-
-            <script src="https://d3js.org/d3.v4.min.js"></script>
-            <script src="https://d3js.org/topojson.v1.min.js"></script>
-            <script>
-                const width = 960;
-                const height = 500;
-                const config = {
-                    speed: 0.005,
-                    verticalTilt: -30,
-                    horizontalTilt: 0
-                }
-                let locations = [
-             
-                    {
-                        "latitude": 37.77493,
-                        "longitude": -122.41942
-                    },
-                    {
-                        "latitude": 40.71427,
-                        "longitude": -74.00597
-                    },
-                    {
-                        "latitude": -6.21462,
-                        "longitude": 106.84513
-                    },
-                   
-                ];
-                let svg = d3.select('svg')
-                    .attr('width', width).attr('height', height);
-                const markerGroup = svg.append('g');
-                const projection = d3.geoOrthographic();
-                const initialScale = projection.scale();
-                const path = d3.geoPath().projection(projection);
-                const center = [width / 2, height / 2];
-
-                drawGlobe();
-                drawGraticule();
-                enableRotation();
-
-                function drawGlobe() {
-                    d3.queue()
-                        .defer(d3.json, 'https://gist.githubusercontent.com/mbostock/4090846/raw/d534aba169207548a8a3d670c9c2cc719ff05c47/world-110m.json')
-                        .defer(d3.json, 'locations.json')
-                        .await((error, worldData, locationData) => {
-                            svg.selectAll(".segment")
-                                .data(topojson.feature(worldData, worldData.objects.countries).features)
-                                .enter().append("path")
-                                .attr("class", "segment")
-                                .attr("d", path)
-                                .style("stroke", "#888")
-                                .style("stroke-width", "1px")
-                                .style("fill", (d, i) => '#e5e5e5')
-                                .style("opacity", ".6");
-                            locations = locationData;
-                            drawMarkers();
-                        });
-                }
-
-                function drawGraticule() {
-                    const graticule = d3.geoGraticule()
-                        .step([10, 10]);
-
-                    svg.append("path")
-                        .datum(graticule)
-                        .attr("class", "graticule")
-                        .attr("d", path)
-                        .style("fill", "#fff")
-                        .style("stroke", "#ccc");
-                }
-
-                function enableRotation() {
-                    d3.timer(function (elapsed) {
-                        projection.rotate([config.speed * elapsed - 120, config.verticalTilt, config.horizontalTilt]);
-                        svg.selectAll("path").attr("d", path);
-                        drawMarkers();
-                    });
-                }
-
-                function drawMarkers() {
-                    const markers = markerGroup.selectAll('circle')
-                        .data(locations);
-                    markers
-                        .enter()
-                        .append('circle')
-                        .merge(markers)
-                        .attr('cx', d => projection([d.longitude, d.latitude])[0])
-                        .attr('cy', d => projection([d.longitude, d.latitude])[1])
-                        .attr('fill', d => {
-                            const coordinate = [d.longitude, d.latitude];
-                            gdistance = d3.geoDistance(coordinate, projection.invert(center));
-                            return gdistance > 1.57 ? 'none' : 'steelblue';
-                        })
-                        .attr('r', 7);
-
-                    markerGroup.each(function () {
-                        this.parentNode.appendChild(this);
-                    });
-                }
-            </script>
-        </body>
+    <body class="flex-container">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+        <script src="src/scripts/globeCreation.js"></script>
+    </body>
 
 
-        <!-- bar chart that isn't working when they are together -->
+<!-- google bar charts -->
+<!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="src/scripts/bar.js"></script>
+</head>
+
+<body>
+    <!--Div that will hold the bar charts-->
+    <div id="chart_div"></div>
+    <div id="chart_div2"></div>
+</body>
+
+<!-- bar chart that isn't working when they are together -->
 
 <!-- 
 <style>
@@ -242,72 +152,25 @@
                 .call(d3.axisLeft(y));
 
         }); -->
-
+<!-- 
     </script> -->
-</body>
+<!-- </body> --> 
 
 
-   <!--Load the AJAX API-->
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript"> 
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
 
-// Load the Visualization API and the piechart package.
-google.load('visualization', '1.0', {'packages':['corechart']});
-
-// Set a callback to run when the Google Visualization API is loaded.
-google.setOnLoadCallback(drawChart);
-
-// Callback that creates and populates a data table,
-// instantiates the pie chart, passes in the data and
-// draws it.
-function drawChart() {
-
-// Create the data table.
-var data = google.visualization.arrayToDataTable([
-    ['Item', 'Yes', { role: 'tooltip' } ,'No',  { role: 'tooltip' } ],
-    ['Var A',   .5 , '', .5,  ''],
-    ['Var B', .9, '', .1,  ''],
-]);
-var data2 = google.visualization.arrayToDataTable([
-    ['Item', 'Yes', { role: 'tooltip' } ,'No',  { role: 'tooltip' } ],
-    ['Var A',   .2 , '', .8,  ''],
-    ['Var B', .8, '', .2,  ''],
-]);
-
-var options = {
-    width: 250,
-    height: 150,
-    backgroundColor: '#FFFFF0',
-    legend: { position: 'none'},
-    hAxis:{ textPosition: 'none', gridlines: {color:'grey', count: 2}},
-    bar: { groupWidth: '75%' },
-    isStacked: true,
-    colors: ['#FF6600', '#FFFFF0'],
- };
-
-// Instantiate and draw our chart, passing in some options.
-var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-chart.draw(data, options);
-var chart2 = new google.visualization.BarChart(document.getElementById('chart_div2'));
-chart.draw(data2, options2);
-}
-
-draw(chart);
-draw(chart2);
-</script>
-</head>
-
-<body>
-<!--Div that will hold the bar charts-->
-<div id="chart_div"></div>
-<div id="chart_div2"></div>
-</body>
-
-
+<!-- city widget -->
      
         <a class="teleport-widget-link" href="https://teleport.org/cities/aarhus/">Life quality score - Aarhus</a>
         <script async class="teleport-widget-script" data-url="https://teleport.org/cities/aarhus/widget/scores/?currency=USD"
-        data-max-width="770" data-height="977" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script> -->
+        data-max-width="770" data-height="977" src="https://teleport.org/assets/firefly/widget-snippet.min.js"></script> --> -->
           
 
 </html>
