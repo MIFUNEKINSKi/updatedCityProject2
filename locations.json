@@ -1,46 +1,57 @@
-[
+[   
     {
     "latitude": 37.77493,
-    "longitude": -122.41942
+    "longitude": -122.41942,
+    "name": "NYC"
 },
 {
     "latitude": 40.71427,
-    "longitude": -74.00597
+    "longitude": -74.00597,
+    "name": "NYC"
 },
 {
     "latitude": -6.21462,
-    "longitude": 106.84513
+    "longitude": 106.84513,
+    "name": "NYC"
 },
 {
     "latitude": 22,
-    "longitude": 88
+    "longitude": 88,
+    "name": "NYC"
 },
 {
     "latitude": 12.61315,
-    "longitude": 38.37723
+    "longitude": 38.37723,
+    "name": "NYC"
 },
 {
     "latitude": -30,
-    "longitude": -58
+    "longitude": -58,
+    "name": "NYC"
 },
 {
     "latitude": -14.270972,
-    "longitude": -170.132217
+    "longitude": -170.132217,
+    "name": "NYC"
 },
 {
     "latitude": 28.033886,
-    "longitude": 1.659626
+    "longitude": 1.659626,
+    "name": "NYC"
 },
 {
     "latitude": 40.463667,
-    "longitude": -3.74922
+    "longitude": -3.74922,
+    "name": "NYC"
 },
 {
     "latitude": 35.907757,
-    "longitude": 127.766922
+    "longitude": 127.766922,
+    "name": "NYC"
 },
 {
     "latitude": 23.634501,
-    "longitude": -102.552784
+    "longitude": -102.552784,
+    "name": "NYC"
 }
 ]
