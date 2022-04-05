@@ -17,17 +17,17 @@
 {
     "latitude": 22,
     "longitude": 88,
-    "name": "new-york"
+    "name": "Bengal, India"
 },
 {
     "latitude": 12.61315,
     "longitude": 38.37723,
-    "name": "new-york"
+    "name": "North Gondar, Ethiopia"
 },
 {
     "latitude": -30,
     "longitude": -58,
-    "name": "new-york"
+    "name": "Monte Caseros, Argentina"
 },
 {
     "latitude": -14.270972,
@@ -37,21 +37,21 @@
 {
     "latitude": 28.033886,
     "longitude": 1.659626,
-    "name": "new-york"
+    "name": "Adrar, Algeria"
 },
 {
     "latitude": 40.463667,
     "longitude": -3.74922,
-    "name": "new-york"
+    "name": "madrid"
 },
 {
     "latitude": 35.907757,
     "longitude": 127.766922,
-    "name": "new-york"
+    "name": "seoul"
 },
 {
     "latitude": 23.634501,
     "longitude": -102.552784,
-    "name": "new-york"
+    "name": "mexico-city"
 }
 ]

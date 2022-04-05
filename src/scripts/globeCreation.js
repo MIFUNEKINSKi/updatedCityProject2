@@ -72,17 +72,19 @@
                         .on("mouseover", function (d) {
                             console.log(d)
                             NAME = d.name
-                            d3.timer(function (elapsed) {
-                                projection.rotate([config.speed % elapsed - 120, config.verticalTilt, config.horizontalTilt]);
-                                svg.selectAll("path").attr("d", path);
-                                drawMarkers();
-                            });
-                            enableRotation()
+                            // pause hover
+                            
+                            // d3.timer(function (elapsed) {
+                            //     projection.rotate([config.speed % elapsed - 120, config.verticalTilt, config.horizontalTilt]);
+                            //     svg.selectAll("path").attr("d", path);
+                            //     drawMarkers();
+                            // });
+                            // enableRotation()
 
                         })
                         .on("click", function (d) {
-                            console.log("clicking");
-                            console.log(cityScoreFromName(NAME))
+                            // console.log(NAME);
+                            (cityScoreFromName(NAME))
                         })
                      
                         .attr('fill', d => {

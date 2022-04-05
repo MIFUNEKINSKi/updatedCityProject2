@@ -5,10 +5,10 @@ function cityScoreFromName(city) {
 
   const f1_data = await fetch(`https://api.teleport.org/api/urban_areas/slug:${city}/scores/`)
                 .then(response => response.json())
-                .then(data => data.teleport_city_score);
-  data.push(f1_data)
+                .then(data => 
+                  console.log(data.teleport_city_score));
 
-return data[0]
+
         };
 
   getData();
