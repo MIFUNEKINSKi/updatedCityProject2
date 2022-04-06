@@ -2,56 +2,74 @@
     {
     "latitude": 37.77493,
     "longitude": -122.41942,
-    "name": "new-york"
+    "name": "San Francisco",
+    "score" : "65.5",
+    "summary" : "<p>San Francisco Bay Area, California, is among the leading cities with a <b>higher number of accelerators or available funding</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>startups</b>, <b>business freedom</b> and <b>healthcare</b>.\n    \n\n    \n</p>\n\n\n    <p>San Francisco Bay Area is one of the top ten city matches for 6.9% of Teleport users.</p>\n"
 },
 {
     "latitude": 40.71427,
     "longitude": -74.00597,
-    "name": "new-york"
+    "name": "new-york",
+    "score": "100",
+    "summary": "<p>The New York metropolitan area is one of the most populated cities in the world. New York City itself is an <b>international center for numerous industries</b> including finance, theater, television, film, arts, and technology. It is also home to an astonishing 37% of foreign-born residents. Costs are high, but so are the energy levels and <b>ambitious spirit</b>. Whether you're visiting or planning to move, the \"Big Apple\" has <b>something to offer for everyone</b>.\n</p>\n\n\n    <p>New York is one of the top ten city matches for 13.9% of Teleport users.</p>\n"
 },
 {
     "latitude": -6.21462,
     "longitude": 106.84513,
-    "name": "jakarta"
+    "name": "jakarta",
+    "score" : "48.6",
+    "summary" : "<p>Jakarta, Indonesia, is characterized by <b>reasonably priced housing</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>cost of living</b>, <b>safety</b> and <b>leisure & culture</b>.\n    \n\n    \n</p>\n\n\n    <p>Jakarta is one of the top ten city matches for 0.4% of Teleport users.</p>\n"
 },
 {
     "latitude": 22,
     "longitude": 88,
-    "name": "Bengal, India"
+    "name": "Bengal, India",
+    "score" : "47.6",
+    "summary" : "<p>Bengaluru, India, differentiates itself with <b>low living costs</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>housing</b>, <b>startups</b> and <b>venture capital</b>.\n    \n\n    \n</p>\n\n\n    <p>Bengaluru is one of the top ten city matches for 2.0% of Teleport users.</p>\n"
 },
 {
-    "latitude": 12.61315,
-    "longitude": 38.37723,
-    "name": "North Gondar, Ethiopia"
+    "latitude": 41.533,
+    "longitude": 2.312,
+    "name": "Barcelona",
+    "score": "63.4",
+    "summary": "<p>\n    Barcelona offers an engaging mix of relaxed lifestyle and innovative business environment, making it one of the most <b>attractive startup scenes</b> in Europe. The city also boasts a great cultural heritage and a modern, active social scene that highlights sports, city beaches and excellent local food. Adding the affordable <b>high quality health services</b> and <b>good travel connections</b>, and Barcelona will appeal to many.\n</p>\n\n\n    <p>Barcelona is one of the top ten city matches for 2.3% of Teleport users.</p>\n"
+},
+{
+    "latitude": 55.784682,
+    "longitude": 12.734265,
+    "name": "Copenhagen",
+    "score": "68.1",
+    "summary": "Copenhagen is a city with a small-town vibe. The city is best explored by bike using one of the world's most developed bike-path system and its countless cafés, bars, and parks are never far away. The <b>high standard of living</b>, easy <b>access to Internet</b>, modern metro system and a <b>thriving business environment</b> attract talent from all over the world.\n</p>\n\n\n    <p>Copenhagen is one of the top ten city matches for 15.3% of Teleport users.</p>\n"
 },
 {
     "latitude": -30,
     "longitude": -58,
-    "name": "Monte Caseros, Argentina"
-},
-{
-    "latitude": -14.270972,
-    "longitude": -170.132217,
-    "name": "new-york"
-},
-{
-    "latitude": 28.033886,
-    "longitude": 1.659626,
-    "name": "Adrar, Algeria"
+    "name": "Monte Caseros, Argentina",
+    "score": "49.6",
+    "summary": "<p>Buenos Aires, Argentina, is characterized by <b>reasonably priced housing</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>cost of living</b>, <b>leisure & culture</b> and <b>tolerance</b>.\n    \n\n    \n</p>\n\n\n    <p>Buenos Aires is one of the top ten city matches for 1.9% of Teleport users.</p>\n"
 },
 {
     "latitude": 40.463667,
     "longitude": -3.74922,
-    "name": "madrid"
+    "name": "madrid",
+    "score": "60.5",
+    "summary": "<p>Madrid, Spain, features a wide variety of <b>free time activities</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>business freedom</b>, <b>safety</b> and <b>healthcare</b>.\n    \n\n    \n</p>\n\n\n    <p>Madrid is one of the top ten city matches for 6.3% of Teleport users.</p>\n"
+    
 },
 {
     "latitude": 35.907757,
     "longitude": 127.766922,
-    "name": "seoul"
+    "name": "seoul",
+    "score": "66.3",
+    "summary": "Seoul is a fast-paced metropolis with 24 hour facilities and <b>expat-friendly</b> social environment. The vibrant nightlife scene, fabulous pop culture as well as the <b>refreshing nature</b> can be reached by using Seoul’s affordable and reliable public transport system, which is also equipped with public wifi common to the <b>most wired city in the world</b>. The advanced technological environment and delicious local food combined with the <b>low crime rate</b> truly make it a highly attractive destination.\n</p>\n\n\n    <p>Seoul is one of the top ten city matches for 18.4% of Teleport users.</p>\n"
 },
 {
+
+    
     "latitude": 23.634501,
     "longitude": -102.552784,
-    "name": "mexico-city"
+    "name": "mexico-city",
+    "score" : "52.1",
+    "summary" : "<p>Mexico City, Mexico, features a wide variety of <b>free time activities</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>housing</b>, <b>cost of living</b> and <b>startups</b>.\n    \n\n    \n</p>\n\n\n    <p>Mexico City is one of the top ten city matches for 0.7% of Teleport users.</p>\n"
 }
 ]
