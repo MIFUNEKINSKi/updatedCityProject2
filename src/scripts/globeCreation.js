@@ -3,7 +3,7 @@
                 const height = 500;
                 const config = {
                     speed: 0.005,
-                    verticalTilt: -30,
+                    verticalTilt: -25,
                     horizontalTilt: 0
                 }
                 let locations = [];
@@ -27,12 +27,13 @@
                             svg.selectAll(".segment")
                                 .data(topojson.feature(worldData, worldData.objects.countries).features)
                                 .enter().append("path")
-                                .attr("class", "segment")
+                                .attr("class", "d")
                                 .attr("d", path)
-                                .style("stroke", "#888")
+                                .style("stroke", "darkgrey")
                                 .style("stroke-width", "1px")
-                                .style("fill", (d, i) => '#e5e5e5')
-                                .style("opacity", ".6");
+                                .style("fill", (d, i) => 'green')
+                                .style("opacity", ".75");
+                                
                             locations = locationData;
                             drawMarkers();
                         });
@@ -48,6 +49,8 @@
                         .attr("d", path)
                         .style("fill", "#fff")
                         .style("stroke", "#ccc");
+    
+
                 }
 
                 function enableRotation() {
@@ -64,27 +67,29 @@
                     markers
                         .enter()
                         .append('circle')
+                        .append('title', "hello")
                         .merge(markers)
                         .attr('cx', d => projection([d.longitude, d.latitude])[0])
                         .attr('cy', d => projection([d.longitude, d.latitude])[1])
+                        .attr("class", "marker")
                         .attr('another', d => projection([d.longitude, d.latitude, d.name])[2])
+                        
            
                         .on("mouseover", function (d) {
                             console.log(d)
                             NAME = d.name
                             // pause hover
                             
-                            // d3.timer(function (elapsed) {
-                            //     projection.rotate([config.speed % elapsed - 120, config.verticalTilt, config.horizontalTilt]);
-                            //     svg.selectAll("path").attr("d", path);
-                            //     drawMarkers();
-                            // });
-                            // enableRotation()
-
+                            d3.timer(function (elapsed) {
+                                projection.rotate([config.speed % elapsed - 120, config.verticalTilt, config.horizontalTilt]);
+                                svg.selectAll("path").attr("d", path);
+                                drawMarkers();
+                            });
+                            
+                            enableRotation()
                         })
                         .on("click", function (d) {
                             // console.log(NAME);
-                            (cityScoreFromName(NAME))
                         })
                      
                         .attr('fill', d => {
@@ -108,42 +113,3 @@
 
            
 
-
-// var width = 345,
-//     height = 300;
-// var projection = d3.geoMercator()
-//     .center([88.36, 27.58])
-//     .translate([width / 2, height / 2])
-//     .scale(7000);
-// var path = d3.geoPath()
-//     .projection(projection);
-
-// var svg = d3.select('#Sk_Map').append('svg')
-//     .attr('width', width)
-//     .attr('height', height);
-
-// var g = svg.append('g');
-
-// d3.json('https://raw.githubusercontent.com/shklnrj/IndiaStateTopojsonFiles/master/Sikkim.topojson')
-//     .then(state => {
-
-//         g.append("g")
-//             .selectAll("path")
-//             .data(topojson.feature(state, state.objects.Sikkim).features)
-//             .enter()
-//             .append("path")
-//             .attr("d", path)
-//             .attr("class", "feature")
-//             .on("click", function (d) {
-//                 var prop = d.properties;
-//                 var string = "<p><strong>District Name</strong>: " + prop.Dist_Name;
-//                 d3.select("#Place_Details")
-//                     .html(string)
-//             })
-
-//         g.append('path')
-//             .datum(topojson.mesh(state, state.objects.Sikkim, (a, b) => a !== b))
-//             .attr('class', 'boundary')
-//             .attr('d', path);
-
-//     });

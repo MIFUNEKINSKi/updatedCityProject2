@@ -11,7 +11,7 @@ function drawChart() {
     var data = google.visualization.arrayToDataTable([
         ['Item', 'Yes', { role: 'tooltip' }, 'No', { role: 'tooltip' }],
         ['New York', 500, '', .5, ''],
-        ['Score2', 90, '', .5, ''],
+        ['Everywhere else, especially socal', 90, '', .5, ''],
     ]);
 
 

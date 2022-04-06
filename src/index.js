@@ -1,6 +1,27 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-  console.log('DOM fully loaded and parsed');
-});
+// Modal ** NOT WORKING ** 
+
+// import Modal from "src/scripts/modal"
+
+// window.addEventListener('DOMContentLoaded', () => {
+//   const modal = new Modal();
+//   modal.render();
+//   const modalContainer = document.getElementById("about-modal-container");
+
+//   const aboutButton = document.getElementById("about-button");
+//   aboutButton.addEventListener("click", () => {
+//     modalContainer.id =
+//       modalContainer.id === "about-modal-container"
+//         ? "about-modal-container-clicked"
+//         : "about-modal-container";
+//   });
+//   const continueButton = document.getElementById("continue-button");
+//   continueButton.addEventListener("click", () => {
+//     modalContainer.id =
+//       modalContainer.id === "about-modal-container"
+//         ? "about-modal-container-clicked"
+//         : "about-modal-container";
+//   });
+// });
 
 
 // need a city class that will take in input from user and query the api for that city
