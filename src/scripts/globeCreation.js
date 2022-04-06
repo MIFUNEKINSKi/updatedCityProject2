@@ -1,8 +1,9 @@
-
+                
+                
                 const width = 960;
                 const height = 500;
                 const config = {
-                    speed: 0.005,
+                    speed: .0025,
                     verticalTilt: -25,
                     horizontalTilt: 0
                 }
@@ -21,20 +22,24 @@
 
                 drawGlobe();
                 drawGraticule();
-                enableRotation()
+            
+                
                 let rotationOn = false
-
                 svg.append("text")
                     .attr("x", width / 2)
                     .attr("y", height - 10)
-                    .text("PAUSE")
+                    .text("PLAY")
                     .attr("text-anchor", "middle")
                     .style("font-family", "sans-serif")
                     .on("mouseover", function () { d3.select(this).style("text-decoration", "underline") })
                     .on("mouseout", function () { d3.select(this).style("text-decoration", "none") })
                     .on("click", function () {
                         rotationOn = !rotationOn;
-                        d3.select(this).text(rotationOn ? "PAUSE" : "PLAY")
+                        d3.select(this).text("")
+                        if (rotationOn) {
+                            enableRotation();
+                        }
+
                     })
                     
 
@@ -86,22 +91,24 @@
                 function drawMarkers() {
                     const markers = markerGroup.selectAll('circle')
                         .data(locations);
+                        console.log(markers)
                     markers
                         .on('mouseover', function (d) {
                             d3.select(this).style("fill", "red")
-                            d3.select(this).transition()
-                                .duration('50')
-                                .attr('opacity', '.75');
-                            console.log(d)
+                            // d3.select(this).transition()
+                            //     .duration('50')
+                            //     .attr('opacity', '.75');
                             NAME = d.name;
                             SCORE = d.score;
                             SUMMARY = d.summary;
+
                                 div.transition()
                                 .duration(50)
                                 .style("opacity", 1);
                                  div.html(NAME + " " + SCORE + " " + " " + SUMMARY)
-                                .style("left", (d3.event.pageX + 10) + "px")
-                                .style("top", (d3.event.pageY - 15) + "px");
+                                 .style("left", (d3.event.pageX + 10) + "px")
+                                 .style("top", (d3.event.pageY - 15) + "px");
+                            
 
                                 
                         })
@@ -139,6 +146,8 @@
                         this.parentNode.appendChild(this);
                         
                     });
+
+
                  
         }
 
