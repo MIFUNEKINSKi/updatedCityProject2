@@ -8,7 +8,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
 
     // Create the data table.
-    var data = google.visualization.arrayToDataTable([
+     let data = google.visualization.arrayToDataTable([
         ['Item', 'Yes', { role: 'tooltip' }, 'No', { role: 'tooltip' }],
         ['New York', 500, '', .5, ''],
         ['Everywhere else, especially socal', 90, '', .5, ''],
