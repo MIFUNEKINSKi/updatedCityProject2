@@ -23,38 +23,21 @@ eval("// Modal ** NOT WORKING ** \n// import Modal from \"src/scripts/modal\"\n/
 /*!************************!*\
   !*** ./src/index.scss ***!
   \************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ (function() {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW5kZXguc2Nzcy5qcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9DaXR5RGF0YUpTUHJvamVjdC1tYWluLy4vc3JjL2luZGV4LnNjc3M/OTc0NSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBleHRyYWN0ZWQgYnkgbWluaS1jc3MtZXh0cmFjdC1wbHVnaW5cbmV4cG9ydCB7fTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.scss\n");
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nHookWebpackError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected selector.\n    ╷\n160 │ */\n    │  ^\n    ╵\n  src/index.scss 160:2  root stylesheet\n    at tryRunOrWebpackError (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/HookWebpackError.js:88:9)\n    at __webpack_require_module__ (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/Compilation.js:5051:12)\n    at __webpack_require__ (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/Compilation.js:5008:18)\n    at asyncLib.eachLimit.err (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/Compilation.js:5079:20)\n    at symbolIterator (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/neo-async/async.js:3485:9)\n    at done (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/neo-async/async.js:3527:9)\n    at Hook.eval [as callAsync] (eval at create (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)\n    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/tapable/lib/Hook.js:18:14)\n    at asyncLib.eachLimit (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/Compilation.js:4986:43)\n    at symbolIterator (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/neo-async/async.js:3482:9)\n-- inner error --\nError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected selector.\n    ╷\n160 │ */\n    │  ^\n    ╵\n  src/index.scss 160:2  root stylesheet\n    at Object.<anonymous> (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/sass-loader/dist/cjs.js!/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/src/index.scss:1:7)\n    at compilation.hooks.executeModule.tap (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/javascript/JavascriptModulesPlugin.js:441:11)\n    at Hook.eval [as call] (eval at create (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:7:1)\n    at Hook.CALL_DELEGATE [as _call] (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/tapable/lib/Hook.js:14:14)\n    at tryRunOrWebpackError (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/Compilation.js:5053:39)\n    at tryRunOrWebpackError (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/HookWebpackError.js:83:7)\n    at __webpack_require_module__ (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/Compilation.js:5051:12)\n    at __webpack_require__ (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/Compilation.js:5008:18)\n    at asyncLib.eachLimit.err (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/webpack/lib/Compilation.js:5079:20)\n    at symbolIterator (/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/neo-async/async.js:3485:9)\n\nGenerated code for /Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/node_modules/sass-loader/dist/cjs.js!/Users/appacademystudent/Desktop/Chris/CityProject2/updatedCityProject2/src/index.scss\n1 | throw new Error(\"Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: expected selector.\\n    ╷\\n160 │ */\\n    │  ^\\n    ╵\\n  src/index.scss 160:2  root stylesheet\");");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	!function() {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = function(exports) {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
-/******/ 	__webpack_modules__["./src/index.js"](0, {}, __webpack_require__);
+/******/ 	__webpack_modules__["./src/index.js"]();
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.scss"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_modules__["./src/index.scss"]();
 /******/ 	
 /******/ })()
 ;

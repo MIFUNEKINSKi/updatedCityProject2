@@ -26,9 +26,12 @@ function drawChart() {
         colors: ['#FF6600', '#FFFFF0'],
     };
 
+    // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
     chart.draw(data, options);
-    // var chart2 = new google.visualization.BarChart(document.getElementById('chart_div2'));
+    var chart2 = new google.visualization.BarChart(document.getElementById('chart_div2'));
+    // chart.draw(data2, options2);
 }
 
 draw(chart);
+// draw(chart2);

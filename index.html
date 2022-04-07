@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="src/dist/main.css">
+    <link rel="stylesheet" href="src/index.scss">
     <script src="src/scripts/grabScore.js"></script> 
     <!-- <link rel="stylesheet" href="./dist/main.css" /> -->
     <link
@@ -20,10 +21,12 @@
 
 <!-- nav  -->
 
+
+
 <body>
     <div class="nav">
         <div id="icons-container">
-            <i class="fa fa-info-circle" id="about-button"></i>
+            <i class="fa fa-info-circle" id="myBtn"></i>
             <a href="https://www.linkedin.com/in/chris-moore-27438989/" target="_blank">
                 <i class="fa fa-linkedin"></i></a>
             <a href="https://github.com/MIFUNEKINSKi/updatedCityProject2" target="_blank">
@@ -39,7 +42,6 @@
             City Livability
         </h1>
     </div>
-  <button id="myBtn">How to Use</button>
     
   <!-- Modal content -->
     <div id="myModal" class="modal">
@@ -73,10 +75,9 @@
 
 <div class="slidecontainer">
     <input type="range" min="0" max="1" value=".0025" step=".0001" class="slider" id="sliderRange">
-    <p>Value: <span id="demo"></span></p>
+    <p>Rotation Speed: <span id="demo"></span></p>
     <script src="src/scripts/slider.js"></script>
 </div>
-
 
 
 </html>
