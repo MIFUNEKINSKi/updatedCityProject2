@@ -31,7 +31,6 @@
                     .text("PLAY")
                     .attr("text-anchor", "middle")
                     .style("font-family", "sans-serif")
-                    .on("mouseover", function () { d3.select(this).style("text-decoration", "underline") })
                     .on("mouseout", function () { d3.select(this).style("text-decoration", "none") })
                     .on("click", function () {
                         rotationOn = !rotationOn;

@@ -24,20 +24,34 @@
     <div class="nav">
         <div id="icons-container">
             <i class="fa fa-info-circle" id="about-button"></i>
-            <a href="https://www.linkedin.com/chris-moore-27438989/" target="_blank">
+            <a href="https://www.linkedin.com/in/chris-moore-27438989/" target="_blank">
                 <i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/MIFUNEKINSKi/CityDataJSProject/tree/master" target="_blank">
+            <a href="https://github.com/MIFUNEKINSKi/updatedCityProject2" target="_blank">
                 <i class="fa fa-github-square"></i>
             </a>
         </div>
     </div>
+
+ <!-- Header -->
 
     <div>
         <h1 class="bar" id="header">
             City Livability
         </h1>
     </div>
+  <button id="myBtn">How to Use</button>
     
+  <!-- Modal content -->
+    <div id="myModal" class="modal">
+       <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Hover over the city you'd like to see information about.  Eventually... compare the scores side by side on the bar chart, then slide the slider to increase the globe spin speed, for science.</p>
+            <script src="src/scripts/modal.js">
+            </script>
+        </div> 
+    
+    </div>
+    <!-- Globe and Chart flexbox -->
     <div class="globe-and-chart-container">
         <svg></svg>
         <script src="https://d3js.org/d3.v4.min.js"></script>
